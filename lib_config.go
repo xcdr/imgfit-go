@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 
 	"strings"
 
@@ -73,7 +74,7 @@ func configInit(cfg *config) {
 	cfg.Hosts = make(map[string]host)
 
 	for i := 1; i < 10; i++ {
-		cfg.Sizes[rune(i)] = defaultSize
+		cfg.Sizes[rune(strconv.Itoa(i)[0])] = defaultSize
 	}
 
 	viper.SetDefault("cache_dir", "/tmp/imgfit")
