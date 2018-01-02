@@ -1,0 +1,24 @@
+cache_dir: /tmp/imgfit/cache
+
+ip: 0.0.0.0
+port: 8080
+
+# allowed size keys range: 1..9
+sizes:
+    1: 1280
+    2: 1024
+    3: 512
+    4: 128
+    5: 64
+
+hosts:
+    default:
+        server_name: localhost
+        base_dir: ./test_data/localhost
+        watermark: ./test_data/watermark.png
+        cache_age: 3600
+    lvh:
+        server_name: lvh.me
+        base_dir: ./test_data/lvh.me
+        watermark:
+        cache_age: 3600
